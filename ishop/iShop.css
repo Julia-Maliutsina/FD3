@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+.IShopComponent {
+  width: 520px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: lavender;
+  min-height: 500px;
+}
+.ShopName {
+  width: 510px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 24px;
+  color: darkslateblue;
+  padding: 10px;
+}
+th {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+  border-top: 1px solid #dce3e9;
+}
+td {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+}
+.ProductImg {
+  max-width: 70px;
+  max-height: 50px;
+}
+.ProductImgInTable {
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  border-right: 1px solid #dce3e9;
+  border-left: 1px solid #dce3e9;
+  border-bottom: 1px solid #dce3e9;
+  background-color: white;
+  margin: 0;
+}
+th.ProductNameInTable {
+  text-align: center;
+}
+.ProductNameInTable {
+  width: 240px;
+  text-align: left;
+  padding: 10px;
+  border-right: 1px solid #dce3e9;
+  border-bottom: 1px solid #dce3e9;
+  background-color: #f3f0f7;
+  margin: 0;
+}
+
+.ProductPriceInTable {
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #dce3e9;
+  border-bottom: 1px solid #dce3e9;
+  background-color: white;
+  margin: 0;
+}
+.ProductLeftInTable {
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #dce3e9;
+  border-right: 1px solid #dce3e9;
+  background-color: floralwhite;
+  margin: 0;
+}
