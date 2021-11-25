@@ -14,9 +14,9 @@ const IShopComponent = React.createClass({
     );
 
     let bodyTable=[];
-    this.props.goods.forEach(function(product, id) {
+    this.props.goods.forEach(function(product) {
       let offer = React.DOM.tr(
-      {key:id,className:'Product'},
+      {key:product.key,className:'Product'},
       React.DOM.td({className: 'ProductImgInTable'}, 
         React.DOM.img ({className: 'ProductImg', src:product.photo, alt:product.name})
       ),
