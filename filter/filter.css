@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+.filterComponent {
+  width: 400px;
+  padding: 10px;
+  background-color: lavender;
+  min-height: 300px;
+  text-align: center;
+}
+.stringListContainer {
+  height: 200px;
+  overflow-y: scroll;
+  background-color: white;
+  padding: 5px;
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.stringListContainer ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+.stringListItem {
+  list-style-type: none;
+}
+.filterStringInput {
+  margin: 10px;
+  display: inline-block;
+}

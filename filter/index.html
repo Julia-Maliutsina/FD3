@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" />
+  <title>Filter string list</title>
+</head> 
+<body> 
+  <div id="container"></div> 
+      
+  <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+      
+  <script src="filter.js"></script>
+  <link rel="stylesheet" type="text/css" href="filter.css" />
+
+  <script>
+    const STRING_ARR = [ 
+      {id: 1, text: "блюститель"}, 
+      {id: 2, text: "маниакальный"}, 
+      {id: 3, text: "нисколько"},  
+      {id: 4, text: "посредине"}, 
+      {id: 5, text: "разворотить"}, 
+      {id: 6, text: "трата"}, 
+      {id: 7, text: "присвистывать"}, 
+      {id: 8, text: "юрисконсульт"}, 
+      {id: 9, text: "землепроходец"},  
+      {id: 10, text: "игольчатый"}, 
+      {id: 11, text: "характеризоваться"}, 
+      {id: 12, text: "недобор"}, 
+      {id: 13, text: "интервал"}, 
+      {id: 14, text: "работодатель"}, 
+      {id: 15, text: "модулировать"},
+      {id: 16, text: "навигация"}
+    ];
+
+    ReactDOM.render(
+      React.createElement(FilterComponent,{array:STRING_ARR}), 
+      document.getElementById('container') 
+    );
+
+  </script>
+
+</body> 
+</html>
