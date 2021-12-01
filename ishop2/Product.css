@@ -1,0 +1,46 @@
+td {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	font-size: 16px;
+	padding: 10px;
+	text-align: center;
+	border-right: 1px solid #dce3e9;
+	border-left: 1px solid #dce3e9;
+	border-bottom: 1px solid #dce3e9;
+	margin: 0;
+}
+.ProductImg {
+	max-width: 70px;
+	max-height: 50px;
+}
+.ProductImgInTable {
+	width: 80px;
+	padding: 5px;
+}
+.ProductNameInTable {
+	width: 240px;
+	text-align: left;
+}
+
+.ProductPriceInTable {
+	width: 100px;
+}
+.ProductLeftInTable {
+	width: 80px;
+}
+.ProductDeleteInTable {
+	width: 70px;
+	background-color: lightcoral;
+	color: #7e2b2b;
+}
+tr {
+	background-color: white;
+	height: 70px;
+}
+tr:hover:not(thead tr) {
+	background-color: #eeebf5;
+	cursor: pointer;
+}
+tr.ProductSelected,
+tr.ProductSelected:hover {
+	background-color: #c3c3e0;
+}
