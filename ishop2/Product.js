@@ -22,7 +22,7 @@ const Product = React.createClass({
     }
 
     return React.DOM.tr(
-      {key: product.key, className: classProduct, onClick: ()=>this.props.changeSelected(product.key)},
+      {className: classProduct, onClick: ()=>this.props.changeSelected(product.key)},
       React.DOM.td({className: 'ProductImgInTable'}, 
         React.DOM.img ({className: 'ProductImg', src:product.photo, alt:product.name})
       ),

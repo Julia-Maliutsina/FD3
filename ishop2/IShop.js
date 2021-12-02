@@ -1,6 +1,6 @@
-const IShopComponent = React.createClass({
+const ShopComponent = React.createClass({
 
-  displayName: 'IShopComponent',
+  displayName: 'ShopComponent',
 
   getInitialState: function () {
     return {
@@ -37,7 +37,7 @@ const IShopComponent = React.createClass({
 
     const bodyTable=this.state.products.map( product =>
       React.createElement(Product, 
-        {product: product, selected: this.state.selectedKey,
+        {key: product.key, product: product, selected: this.state.selectedKey,
         changeSelected: this.selectProduct, deleteProduct: this.deleteProduct
       })
     );
