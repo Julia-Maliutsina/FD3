@@ -22,25 +22,28 @@ class IShop extends React.Component {
 		editForm: false,
 		productToEdit: {},
 		formMode: "",
+		editInProcess: false,
 	};
 
 	selectProduct = (key) => {
-		for (let prod of this.state.products) {
-			if (key === prod.key) {
-				this.setState({
-					selected: prod,
-					displayAddButton: "Displayed",
-					addForm: false,
-					editForm: false,
-					formMode: "",
-				});
+		if (!this.state.editInProcess) {
+			for (let prod of this.state.products) {
+				if (key === prod.key) {
+					this.setState({
+						selected: prod,
+						displayAddButton: "Displayed",
+						addForm: false,
+						editForm: false,
+						formMode: "",
+					});
+				}
 			}
 		}
 	};
 
 	deleteProduct = (key, EO) => {
 		EO.stopPropagation();
-		if (window.confirm("Delete product from list?")) {
+		if (!this.state.editInProcess && window.confirm("Delete product from list?")) {
 			let productsArray = [...this.state.products];
 			productsArray = productsArray.filter((product) => product.key !== key);
 			this.setState({ products: productsArray });
@@ -50,7 +53,8 @@ class IShop extends React.Component {
 	addProduct = () => {
 		let allProducts = this.state.products;
 		allProducts = allProducts.map((product) => product.key);
-		const allProductsLength = Math.max(...allProducts);
+		let allProductsLength = Math.max(...allProducts);
+		allProductsLength++;
 		this.setState({
 			selected: {},
 			displayAddButton: "NotDisplayed",
@@ -64,13 +68,88 @@ class IShop extends React.Component {
 
 	editProduct = (product, EO) => {
 		EO.stopPropagation();
+		if (!this.state.editInProcess) {
+			this.setState({
+				selected: { key: product.key },
+				displayAddButton: "NotDisplayed",
+				addForm: false,
+				editForm: true,
+				formMode: "edit",
+				productToEdit: product,
+			});
+		}
+	};
+
+	setEditInProcess = (edit) => {
+		this.setState({ editInProcess: edit });
+	};
+
+	saveNew = (key, newName, newPrice, newUrl, newLeft) => {
+		console.log(key);
+		const newProduct = {
+			name: newName,
+			price: newPrice,
+			left: newLeft,
+			url: newUrl,
+			key: key,
+		};
+		let newProducts = [newProduct, ...this.state.products];
+		this.setState(
+			{ products: newProducts },
+			this.setState({
+				displayAddButton: "Displayed",
+				addForm: false,
+				new: {
+					key: NaN,
+				},
+				editForm: false,
+				productToEdit: {},
+				formMode: "",
+				editInProcess: false,
+			}),
+		);
+	};
+
+	saveEdited = (key, newName, newPrice, newUrl, newLeft) => {
+		let newProducts = [...this.state.products];
+		for (let prod = 0; prod < newProducts.length; prod++) {
+			if (newProducts[prod].key === key) {
+				newProducts[prod] = {
+					name: newName,
+					price: newPrice,
+					left: newLeft,
+					url: newUrl,
+					key: key,
+				};
+				this.setState(
+					{ products: newProducts },
+					this.setState({
+						displayAddButton: "Displayed",
+						addForm: false,
+						new: {
+							key: NaN,
+						},
+						editForm: false,
+						productToEdit: {},
+						formMode: "",
+						editInProcess: false,
+					}),
+				);
+			}
+		}
+	};
+
+	cancel = () => {
 		this.setState({
-			selected: {},
-			displayAddButton: "NotDisplayed",
+			displayAddButton: "Displayed",
 			addForm: false,
-			editForm: true,
-			formMode: "edit",
-			productToEdit: product,
+			new: {
+				key: NaN,
+			},
+			editForm: false,
+			productToEdit: {},
+			formMode: "",
+			editInProcess: false,
 		});
 	};
 
@@ -104,9 +183,17 @@ class IShop extends React.Component {
 				<button className={this.state.displayAddButton} onClick={this.addProduct}>
 					New product
 				</button>
-				{this.state.selected.key && <ProductInfo product={this.state.selected} />}
+				{this.state.selected.name && <ProductInfo product={this.state.selected} />}
 				{(this.state.addForm || this.state.editForm) && (
-					<ProductForm formMode={this.state.formMode} product={this.state.productToEdit} new={this.state.new} />
+					<ProductForm
+						formMode={this.state.formMode}
+						product={this.state.productToEdit}
+						new={this.state.new}
+						setEditInProcess={this.setEditInProcess}
+						saveNew={this.saveNew}
+						saveEdited={this.saveEdited}
+						cancel={this.cancel}
+					/>
 				)}
 			</div>
 		);
