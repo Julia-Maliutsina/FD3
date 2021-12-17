@@ -16,9 +16,6 @@ class IShop extends React.Component {
 		productToDelete: NaN,
 		displayAddButton: "Displayed",
 		addForm: false,
-		new: {
-			key: NaN,
-		},
 		editForm: false,
 		productToEdit: {},
 		formMode: "",
@@ -60,9 +57,8 @@ class IShop extends React.Component {
 			displayAddButton: "NotDisplayed",
 			addForm: true,
 			editForm: false,
-			new: { key: allProductsLength },
 			formMode: "add",
-			productToEdit: {},
+			productToEdit: { key: allProductsLength },
 		});
 	};
 
@@ -84,14 +80,13 @@ class IShop extends React.Component {
 		this.setState({ editInProcess: edit });
 	};
 
-	saveNew = (key, newName, newPrice, newUrl, newLeft) => {
-		console.log(key);
+	saveNew = (newName, newPrice, newUrl, newLeft) => {
 		const newProduct = {
 			name: newName,
 			price: newPrice,
 			left: newLeft,
 			url: newUrl,
-			key: key,
+			key: this.state.productToEdit.key,
 		};
 		let newProducts = [newProduct, ...this.state.products];
 		this.setState(
@@ -99,9 +94,6 @@ class IShop extends React.Component {
 			this.setState({
 				displayAddButton: "Displayed",
 				addForm: false,
-				new: {
-					key: NaN,
-				},
 				editForm: false,
 				productToEdit: {},
 				formMode: "",
@@ -126,9 +118,6 @@ class IShop extends React.Component {
 					this.setState({
 						displayAddButton: "Displayed",
 						addForm: false,
-						new: {
-							key: NaN,
-						},
 						editForm: false,
 						productToEdit: {},
 						formMode: "",
@@ -143,9 +132,6 @@ class IShop extends React.Component {
 		this.setState({
 			displayAddButton: "Displayed",
 			addForm: false,
-			new: {
-				key: NaN,
-			},
 			editForm: false,
 			productToEdit: {},
 			formMode: "",
@@ -186,9 +172,9 @@ class IShop extends React.Component {
 				{this.state.selected.name && <ProductInfo product={this.state.selected} />}
 				{(this.state.addForm || this.state.editForm) && (
 					<ProductForm
+						key={this.state.productToEdit.key}
 						formMode={this.state.formMode}
 						product={this.state.productToEdit}
-						new={this.state.new}
 						setEditInProcess={this.setEditInProcess}
 						saveNew={this.saveNew}
 						saveEdited={this.saveEdited}

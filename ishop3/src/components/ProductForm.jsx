@@ -1,11 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { ERRORS } from "../constants";
+import { validName, validPrice, validUrl, validLeft } from "../utils/validation";
+
+const DISPLAY_ERROR = "Displayed ErrorMessage";
+const NO_DISPLAY = "NotDisplayed";
+
 class ProductForm extends React.Component {
 	static propTypes = {
 		product: PropTypes.object,
 		formMode: PropTypes.string,
-		new: PropTypes.object.isRequired,
 		setEditInProcess: PropTypes.func.isRequired,
 		saveNew: PropTypes.func.isRequired,
 		saveEdited: PropTypes.func.isRequired,
@@ -18,46 +23,46 @@ class ProductForm extends React.Component {
 		newUrl: this.props.product.url || "",
 		newLeft: this.props.product.left || "",
 		hasErrors: false,
-		nameError: "NotDisplayed",
-		priceError: "NotDisplayed",
-		urlError: "NotDisplayed",
-		leftError: "NotDisplayed",
+		nameError: NO_DISPLAY,
+		priceError: NO_DISPLAY,
+		urlError: NO_DISPLAY,
+		leftError: NO_DISPLAY,
 	};
 
 	setNewName = (value) => {
 		this.props.setEditInProcess(true);
-		if (value.length > 30 || value.length === 0) {
-			this.setState({ nameError: "Displayed ErrorMessage", hasErrors: true });
+		if (validName(value)) {
+			this.setState({ nameError: DISPLAY_ERROR, hasErrors: true });
 			return;
 		}
-		this.setState({ nameError: "NotDisplayed" });
+		this.setState({ nameError: NO_DISPLAY });
 		this.setState({ newName: value });
 	};
 	setNewPrice = (value) => {
 		this.props.setEditInProcess(true);
-		if (!/^[0-9]{0,5}$/.test(value)) {
-			this.setState({ priceError: "Displayed ErrorMessage", hasErrors: true });
+		if (validPrice(value)) {
+			this.setState({ priceError: DISPLAY_ERROR, hasErrors: true });
 			return;
 		}
-		this.setState({ priceError: "NotDisplayed" });
+		this.setState({ priceError: NO_DISPLAY });
 		this.setState({ newPrice: value });
 	};
 	setNewUrl = (value) => {
 		this.props.setEditInProcess(true);
-		if (!/^[\w\.\:\/\=\?]*$/.test(value) || value.length > 30) {
-			this.setState({ urlError: "Displayed ErrorMessage", hasErrors: true });
+		if (validUrl(value) || value.length > 30) {
+			this.setState({ urlError: DISPLAY_ERROR, hasErrors: true });
 			return;
 		}
-		this.setState({ urlError: "NotDisplayed" });
+		this.setState({ urlError: NO_DISPLAY });
 		this.setState({ newUrl: value });
 	};
 	setNewLeft = (value) => {
 		this.props.setEditInProcess(true);
-		if (!/^[0-9]*$/.test(value) || value.length > 4) {
-			this.setState({ leftError: "Displayed ErrorMessage", hasErrors: true });
+		if (validLeft(value) || value.length > 4) {
+			this.setState({ leftError: DISPLAY_ERROR, hasErrors: true });
 			return;
 		}
-		this.setState({ leftError: "NotDisplayed" });
+		this.setState({ leftError: NO_DISPLAY });
 		this.setState({ newLeft: value });
 	};
 
@@ -67,32 +72,26 @@ class ProductForm extends React.Component {
 				{this.props.formMode === "add" && (
 					<div>
 						<h4>Add new product</h4>
-						<label>Id: {this.props.new.key}</label>
+						<label>Id: {this.props.product.key}</label>
 						<label>
 							Name:
 							<input type="text" value={this.state.newName} onChange={(e) => this.setNewName(e.target.value)}></input>
-							<span className={this.state.nameError}>Name is required and must be shorter than 30 caracters</span>
+							<span className={this.state.nameError}>{ERRORS.name}</span>
 						</label>
 						<label>
 							Price:
 							<input type="text" value={this.state.newPrice} onChange={(e) => this.setNewPrice(e.target.value)}></input>
-							<span className={this.state.priceError}>
-								Price must be no longer than 5 caracters and contain only numbers.
-							</span>
+							<span className={this.state.priceError}>{ERRORS.price}</span>
 						</label>
 						<label>
 							URL:
 							<input type="text" value={this.state.newUrl} onChange={(e) => this.setNewUrl(e.target.value)}></input>
-							<span className={this.state.urlError}>
-								URL must be 30 caracters or less and contain letters, numbers or symbols ".:/?=" .
-							</span>
+							<span className={this.state.urlError}>{ERRORS.url}</span>
 						</label>
 						<label>
 							Quantity:
 							<input type="text" value={this.state.newLeft} onChange={(e) => this.setNewLeft(e.target.value)}></input>
-							<span className={this.state.leftError}>
-								Quantity must be 4 caracters or less and contain only numbers.
-							</span>
+							<span className={this.state.leftError}>{ERRORS.left}</span>
 						</label>
 						<button
 							onClick={() =>
@@ -119,28 +118,22 @@ class ProductForm extends React.Component {
 						<label>
 							Name:
 							<input type="text" value={this.state.newName} onChange={(e) => this.setNewName(e.target.value)}></input>
-							<span className={this.state.nameError}>Name is required and must be shorter than 30 caracters</span>
+							<span className={this.state.nameError}>{ERRORS.name}</span>
 						</label>
 						<label>
 							Price:
 							<input type="text" value={this.state.newPrice} onChange={(e) => this.setNewPrice(e.target.value)}></input>
-							<span className={this.state.priceError}>
-								Price must be no longer than 5 caracters and contain only numbers.
-							</span>
+							<span className={this.state.priceError}>{ERRORS.price}</span>
 						</label>
 						<label>
 							URL:
 							<input type="text" value={this.state.newUrl} onChange={(e) => this.setNewUrl(e.target.value)}></input>
-							<span className={this.state.urlError}>
-								URL must be 30 caracters or less and contain letters, numbers or symbols ".:/?=" .
-							</span>
+							<span className={this.state.urlError}>{ERRORS.url}</span>
 						</label>
 						<label>
 							Quantity:
 							<input type="text" value={this.state.newLeft} onChange={(e) => this.setNewLeft(e.target.value)}></input>
-							<span className={this.state.leftError}>
-								Quantity must be 4 caracters or less and contain only numbers.
-							</span>
+							<span className={this.state.leftError}>{ERRORS.left}</span>
 						</label>
 						<button
 							onClick={() =>
