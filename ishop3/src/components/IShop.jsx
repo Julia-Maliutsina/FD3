@@ -80,13 +80,13 @@ class IShop extends React.Component {
 		this.setState({ editInProcess: edit });
 	};
 
-	saveNew = (newName, newPrice, newUrl, newLeft) => {
+	saveNew = (newKey, newName, newPrice, newUrl, newLeft) => {
 		const newProduct = {
 			name: newName,
 			price: newPrice,
 			left: newLeft,
 			url: newUrl,
-			key: this.state.productToEdit.key,
+			key: newKey,
 		};
 		let newProducts = [newProduct, ...this.state.products];
 		this.setState(
@@ -153,7 +153,7 @@ class IShop extends React.Component {
 			<Product
 				key={product.key}
 				product={product}
-				selected={this.state.selected}
+				isSelected={this.state.selected.key === product.key}
 				changeSelected={this.selectProduct}
 				deleteProduct={this.deleteProduct}
 				editProduct={this.editProduct}

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 class Product extends React.Component {
 	static propTypes = {
 		product: PropTypes.object.isRequired,
-		selected: PropTypes.object,
+		isSelected: PropTypes.bool,
 		changeSelected: PropTypes.func.isRequired,
 		deleteProduct: PropTypes.func.isRequired,
 		editProduct: PropTypes.func.isRequired,
@@ -13,7 +13,7 @@ class Product extends React.Component {
 	render() {
 		const product = this.props.product;
 		let classProduct = "Product";
-		if (this.props.selected.key && product.key === this.props.selected.key) {
+		if (this.props.isSelected) {
 			classProduct = "ProductSelected";
 		}
 		return (

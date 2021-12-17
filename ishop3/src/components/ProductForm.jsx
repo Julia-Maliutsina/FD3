@@ -31,39 +31,39 @@ class ProductForm extends React.Component {
 
 	setNewName = (value) => {
 		this.props.setEditInProcess(true);
-		if (validName(value)) {
-			this.setState({ nameError: DISPLAY_ERROR, hasErrors: true });
-			return;
-		}
-		this.setState({ nameError: NO_DISPLAY });
 		this.setState({ newName: value });
+		if (validName(value)) {
+			this.setState({ nameError: NO_DISPLAY, hasErrors: false });
+		} else {
+			this.setState({ nameError: DISPLAY_ERROR, hasErrors: true });
+		}
 	};
 	setNewPrice = (value) => {
 		this.props.setEditInProcess(true);
-		if (validPrice(value)) {
-			this.setState({ priceError: DISPLAY_ERROR, hasErrors: true });
-			return;
-		}
-		this.setState({ priceError: NO_DISPLAY });
 		this.setState({ newPrice: value });
+		if (validPrice(value)) {
+			this.setState({ priceError: NO_DISPLAY, hasErrors: false });
+		} else {
+			this.setState({ priceError: DISPLAY_ERROR, hasErrors: true });
+		}
 	};
 	setNewUrl = (value) => {
 		this.props.setEditInProcess(true);
-		if (validUrl(value) || value.length > 30) {
-			this.setState({ urlError: DISPLAY_ERROR, hasErrors: true });
-			return;
-		}
-		this.setState({ urlError: NO_DISPLAY });
 		this.setState({ newUrl: value });
+		if (validUrl(value)) {
+			this.setState({ urlError: NO_DISPLAY, hasErrors: false });
+		} else {
+			this.setState({ urlError: DISPLAY_ERROR, hasErrors: true });
+		}
 	};
 	setNewLeft = (value) => {
 		this.props.setEditInProcess(true);
-		if (validLeft(value) || value.length > 4) {
-			this.setState({ leftError: DISPLAY_ERROR, hasErrors: true });
-			return;
-		}
-		this.setState({ leftError: NO_DISPLAY });
 		this.setState({ newLeft: value });
+		if (validLeft(value)) {
+			this.setState({ leftError: NO_DISPLAY, hasErrors: false });
+		} else {
+			this.setState({ leftError: DISPLAY_ERROR, hasErrors: true });
+		}
 	};
 
 	render() {
@@ -98,7 +98,7 @@ class ProductForm extends React.Component {
 								!this.state.hasErrors &&
 								this.state.newName &&
 								this.props.saveNew(
-									this.props.new.key,
+									this.props.product.key,
 									this.state.newName,
 									this.state.newPrice,
 									this.state.newUrl,
