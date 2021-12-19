@@ -27,42 +27,115 @@ class ProductForm extends React.Component {
 		priceError: NO_DISPLAY,
 		urlError: NO_DISPLAY,
 		leftError: NO_DISPLAY,
+		saveButtonDisabled: "true",
 	};
 
 	setNewName = (value) => {
 		this.props.setEditInProcess(true);
 		this.setState({ newName: value });
 		if (validName(value)) {
-			this.setState({ nameError: NO_DISPLAY, hasErrors: false });
+			this.setState(
+				{
+					nameError: NO_DISPLAY,
+					hasErrors: false,
+				},
+				() => {
+					this.checkAbilityToSave();
+				},
+			);
 		} else {
-			this.setState({ nameError: DISPLAY_ERROR, hasErrors: true });
+			this.setState(
+				{
+					nameError: DISPLAY_ERROR,
+					hasErrors: true,
+				},
+				() => {
+					this.checkAbilityToSave();
+				},
+			);
 		}
 	};
 	setNewPrice = (value) => {
 		this.props.setEditInProcess(true);
 		this.setState({ newPrice: value });
 		if (validPrice(value)) {
-			this.setState({ priceError: NO_DISPLAY, hasErrors: false });
+			this.setState(
+				{
+					priceError: NO_DISPLAY,
+					hasErrors: false,
+				},
+				() => {
+					this.checkAbilityToSave();
+				},
+			);
 		} else {
-			this.setState({ priceError: DISPLAY_ERROR, hasErrors: true });
+			this.setState(
+				{
+					priceError: DISPLAY_ERROR,
+					hasErrors: true,
+				},
+				() => {
+					this.checkAbilityToSave();
+				},
+			);
 		}
 	};
 	setNewUrl = (value) => {
 		this.props.setEditInProcess(true);
 		this.setState({ newUrl: value });
 		if (validUrl(value)) {
-			this.setState({ urlError: NO_DISPLAY, hasErrors: false });
+			this.setState(
+				{
+					urlError: NO_DISPLAY,
+					hasErrors: false,
+				},
+				() => {
+					this.checkAbilityToSave();
+				},
+			);
 		} else {
-			this.setState({ urlError: DISPLAY_ERROR, hasErrors: true });
+			this.setState(
+				{
+					urlError: DISPLAY_ERROR,
+					hasErrors: true,
+				},
+				() => {
+					this.checkAbilityToSave();
+				},
+			);
 		}
 	};
 	setNewLeft = (value) => {
 		this.props.setEditInProcess(true);
 		this.setState({ newLeft: value });
 		if (validLeft(value)) {
-			this.setState({ leftError: NO_DISPLAY, hasErrors: false });
+			this.setState(
+				{
+					leftError: NO_DISPLAY,
+					hasErrors: false,
+				},
+				() => {
+					this.checkAbilityToSave();
+				},
+			);
 		} else {
-			this.setState({ leftError: DISPLAY_ERROR, hasErrors: true });
+			this.setState(
+				{
+					leftError: DISPLAY_ERROR,
+					hasErrors: true,
+				},
+				() => {
+					this.checkAbilityToSave();
+				},
+			);
+		}
+	};
+
+	checkAbilityToSave = () => {
+		if (!this.state.hasErrors && this.state.newName && this.state.newPrice && this.state.newUrl && this.state.newLeft) {
+			this.setState({ saveButtonDisabled: "" });
+		} else {
+			this.setState({ saveButtonDisabled: "true" });
 		}
 	};
 
@@ -94,6 +167,7 @@ class ProductForm extends React.Component {
 							<span className={this.state.leftError}>{ERRORS.left}</span>
 						</label>
 						<button
+							disabled={this.state.saveButtonDisabled}
 							onClick={() =>
 								!this.state.hasErrors &&
 								this.state.newName &&
@@ -136,9 +210,9 @@ class ProductForm extends React.Component {
 							<span className={this.state.leftError}>{ERRORS.left}</span>
 						</label>
 						<button
+							disabled={this.state.saveButtonDisabled}
 							onClick={() =>
 								!this.state.hasErrors &&
-								this.state.newName &&
 								this.props.saveEdited(
 									this.props.product.key,
 									this.state.newName,
