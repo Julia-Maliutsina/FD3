@@ -22,121 +22,62 @@ class ProductForm extends React.Component {
 		newPrice: this.props.product.price || "",
 		newUrl: this.props.product.url || "",
 		newLeft: this.props.product.left || "",
-		hasErrors: false,
-		nameError: NO_DISPLAY,
-		priceError: NO_DISPLAY,
-		urlError: NO_DISPLAY,
-		leftError: NO_DISPLAY,
+		hasErrors: this.props.formMode === "edit" ? false : true,
+		nameError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
+		priceError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
+		urlError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
+		leftError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
 		saveButtonDisabled: "true",
 	};
 
-	setNewName = (value) => {
-		this.props.setEditInProcess(true);
-		this.setState({ newName: value });
-		if (validName(value)) {
-			this.setState(
-				{
-					nameError: NO_DISPLAY,
-					hasErrors: false,
-				},
-				() => {
-					this.checkAbilityToSave();
-				},
-			);
-		} else {
-			this.setState(
-				{
-					nameError: DISPLAY_ERROR,
-					hasErrors: true,
-				},
-				() => {
-					this.checkAbilityToSave();
-				},
-			);
-		}
+	errorsCheck = () => {
+		validName(this.state.newName) && this.state.newName
+			? this.setState({ hasErrors: false, nameError: NO_DISPLAY })
+			: this.setState({ hasErrors: true, nameError: DISPLAY_ERROR });
+		validPrice(this.state.newPrice) && this.state.newPrice
+			? this.setState({ hasErrors: false, priceError: NO_DISPLAY })
+			: this.setState({ hasErrors: true, priceError: DISPLAY_ERROR });
+		validUrl(this.state.newUrl) && this.state.newUrl
+			? this.setState({ hasErrors: false, urlError: NO_DISPLAY })
+			: this.setState({ hasErrors: true, urlError: DISPLAY_ERROR });
+		validLeft(this.state.newLeft) && this.state.newLeft
+			? this.setState({ hasErrors: false, leftError: NO_DISPLAY })
+			: this.setState({ hasErrors: true, leftError: DISPLAY_ERROR });
 	};
-	setNewPrice = (value) => {
-		this.props.setEditInProcess(true);
-		this.setState({ newPrice: value });
-		if (validPrice(value)) {
-			this.setState(
-				{
-					priceError: NO_DISPLAY,
-					hasErrors: false,
-				},
-				() => {
-					this.checkAbilityToSave();
-				},
-			);
-		} else {
-			this.setState(
-				{
-					priceError: DISPLAY_ERROR,
-					hasErrors: true,
-				},
-				() => {
-					this.checkAbilityToSave();
-				},
-			);
-		}
-	};
-	setNewUrl = (value) => {
-		this.props.setEditInProcess(true);
-		this.setState({ newUrl: value });
-		if (validUrl(value)) {
-			this.setState(
-				{
-					urlError: NO_DISPLAY,
-					hasErrors: false,
-				},
-				() => {
-					this.checkAbilityToSave();
-				},
-			);
-		} else {
-			this.setState(
-				{
-					urlError: DISPLAY_ERROR,
-					hasErrors: true,
-				},
-				() => {
-					this.checkAbilityToSave();
-				},
-			);
-		}
-	};
-	setNewLeft = (value) => {
-		this.props.setEditInProcess(true);
-		this.setState({ newLeft: value });
-		if (validLeft(value)) {
-			this.setState(
-				{
-					leftError: NO_DISPLAY,
-					hasErrors: false,
-				},
-				() => {
-					this.checkAbilityToSave();
-				},
-			);
-		} else {
-			this.setState(
-				{
-					leftError: DISPLAY_ERROR,
-					hasErrors: true,
-				},
-				() => {
-					this.checkAbilityToSave();
-				},
-			);
-		}
-	};
-
 	checkAbilityToSave = () => {
 		if (!this.state.hasErrors && this.state.newName && this.state.newPrice && this.state.newUrl && this.state.newLeft) {
 			this.setState({ saveButtonDisabled: "" });
 		} else {
 			this.setState({ saveButtonDisabled: "true" });
 		}
+	};
+	setNewName = (value) => {
+		this.props.setEditInProcess(true);
+		this.setState({ newName: value }, () => {
+			this.errorsCheck();
+			this.checkAbilityToSave();
+		});
+	};
+	setNewPrice = (value) => {
+		this.props.setEditInProcess(true);
+		this.setState({ newPrice: value }, () => {
+			this.errorsCheck();
+			this.checkAbilityToSave();
+		});
+	};
+	setNewUrl = (value) => {
+		this.props.setEditInProcess(true);
+		this.setState({ newUrl: value }, () => {
+			this.errorsCheck();
+			this.checkAbilityToSave();
+		});
+	};
+	setNewLeft = (value) => {
+		this.props.setEditInProcess(true);
+		this.setState({ newLeft: value }, () => {
+			this.errorsCheck();
+			this.checkAbilityToSave();
+		});
 	};
 
 	render() {

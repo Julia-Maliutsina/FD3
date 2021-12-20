@@ -8,7 +8,7 @@ export const GOODS = [
 ];
 
 export const ERRORS = {
-  name: "Name is required and must be shorter than 30 caracters",
+  name: "Name must be shorter than 30 caracters",
   price: "Price must be no longer than 5 caracters and contain only numbers.",
   url: "URL must be 30 caracters or less and contain letters, numbers or symbols '.:/?='",
   left: "Quantity must be 4 caracters or less and contain only numbers.",
