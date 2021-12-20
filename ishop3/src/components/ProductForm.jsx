@@ -22,7 +22,6 @@ class ProductForm extends React.Component {
 		newPrice: this.props.product.price || "",
 		newUrl: this.props.product.url || "",
 		newLeft: this.props.product.left || "",
-		hasErrors: this.props.formMode === "edit" ? false : true,
 		nameError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
 		priceError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
 		urlError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
@@ -30,22 +29,17 @@ class ProductForm extends React.Component {
 		saveButtonDisabled: "true",
 	};
 
-	errorsCheck = () => {
-		validName(this.state.newName) && this.state.newName
-			? this.setState({ hasErrors: false, nameError: NO_DISPLAY })
-			: this.setState({ hasErrors: true, nameError: DISPLAY_ERROR });
-		validPrice(this.state.newPrice) && this.state.newPrice
-			? this.setState({ hasErrors: false, priceError: NO_DISPLAY })
-			: this.setState({ hasErrors: true, priceError: DISPLAY_ERROR });
-		validUrl(this.state.newUrl) && this.state.newUrl
-			? this.setState({ hasErrors: false, urlError: NO_DISPLAY })
-			: this.setState({ hasErrors: true, urlError: DISPLAY_ERROR });
-		validLeft(this.state.newLeft) && this.state.newLeft
-			? this.setState({ hasErrors: false, leftError: NO_DISPLAY })
-			: this.setState({ hasErrors: true, leftError: DISPLAY_ERROR });
-	};
 	checkAbilityToSave = () => {
-		if (!this.state.hasErrors && this.state.newName && this.state.newPrice && this.state.newUrl && this.state.newLeft) {
+		if (
+			this.state.nameError === NO_DISPLAY &&
+			this.state.priceError === NO_DISPLAY &&
+			this.state.urlError === NO_DISPLAY &&
+			this.state.leftError === NO_DISPLAY &&
+			this.state.newName &&
+			this.state.newPrice &&
+			this.state.newUrl &&
+			this.state.newLeft
+		) {
 			this.setState({ saveButtonDisabled: "" });
 		} else {
 			this.setState({ saveButtonDisabled: "true" });
@@ -54,29 +48,45 @@ class ProductForm extends React.Component {
 	setNewName = (value) => {
 		this.props.setEditInProcess(true);
 		this.setState({ newName: value }, () => {
-			this.errorsCheck();
-			this.checkAbilityToSave();
+			if (validName(this.state.newName) && this.state.newName) {
+				this.setState({ nameError: NO_DISPLAY }, () => this.checkAbilityToSave());
+			} else {
+				this.setState({ nameError: DISPLAY_ERROR });
+				this.setState({ saveButtonDisabled: "true" });
+			}
 		});
 	};
 	setNewPrice = (value) => {
 		this.props.setEditInProcess(true);
 		this.setState({ newPrice: value }, () => {
-			this.errorsCheck();
-			this.checkAbilityToSave();
+			if (validPrice(this.state.newPrice) && this.state.newPrice) {
+				this.setState({ priceError: NO_DISPLAY }, () => this.checkAbilityToSave());
+			} else {
+				this.setState({ priceError: DISPLAY_ERROR });
+				this.setState({ saveButtonDisabled: "true" });
+			}
 		});
 	};
 	setNewUrl = (value) => {
 		this.props.setEditInProcess(true);
 		this.setState({ newUrl: value }, () => {
-			this.errorsCheck();
-			this.checkAbilityToSave();
+			if (validUrl(this.state.newUrl) && this.state.newUrl) {
+				this.setState({ urlError: NO_DISPLAY }, () => this.checkAbilityToSave());
+			} else {
+				this.setState({ urlError: DISPLAY_ERROR });
+				this.setState({ saveButtonDisabled: "true" });
+			}
 		});
 	};
 	setNewLeft = (value) => {
 		this.props.setEditInProcess(true);
 		this.setState({ newLeft: value }, () => {
-			this.errorsCheck();
-			this.checkAbilityToSave();
+			if (validLeft(this.state.newLeft) && this.state.newLeft) {
+				this.setState({ leftError: NO_DISPLAY }, () => this.checkAbilityToSave());
+			} else {
+				this.setState({ leftError: DISPLAY_ERROR });
+				this.setState({ saveButtonDisabled: "true" });
+			}
 		});
 	};
 
@@ -110,8 +120,6 @@ class ProductForm extends React.Component {
 						<button
 							disabled={this.state.saveButtonDisabled}
 							onClick={() =>
-								!this.state.hasErrors &&
-								this.state.newName &&
 								this.props.saveNew(
 									this.props.product.key,
 									this.state.newName,
@@ -153,7 +161,6 @@ class ProductForm extends React.Component {
 						<button
 							disabled={this.state.saveButtonDisabled}
 							onClick={() =>
-								!this.state.hasErrors &&
 								this.props.saveEdited(
 									this.props.product.key,
 									this.state.newName,
