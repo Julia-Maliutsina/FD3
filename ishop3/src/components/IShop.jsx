@@ -41,8 +41,7 @@ class IShop extends React.Component {
 	deleteProduct = (key, EO) => {
 		EO.stopPropagation();
 		if (!this.state.editInProcess && window.confirm("Delete product from list?")) {
-			let productsArray = [...this.state.products];
-			productsArray = productsArray.filter((product) => product.key !== key);
+			const productsArray = this.state.products.filter((product) => product.key !== key);
 			this.setState({ products: productsArray });
 		}
 	};

@@ -26,7 +26,7 @@ class ProductForm extends React.Component {
 		priceError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
 		urlError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
 		leftError: this.props.formMode === "edit" ? NO_DISPLAY : DISPLAY_ERROR,
-		saveButtonDisabled: "true",
+		saveButtonDisabled: true,
 	};
 
 	checkAbilityToSave = () => {
@@ -40,9 +40,9 @@ class ProductForm extends React.Component {
 			this.state.newUrl &&
 			this.state.newLeft
 		) {
-			this.setState({ saveButtonDisabled: "" });
+			this.setState({ saveButtonDisabled: false });
 		} else {
-			this.setState({ saveButtonDisabled: "true" });
+			this.setState({ saveButtonDisabled: true });
 		}
 	};
 	setNewName = (value) => {
