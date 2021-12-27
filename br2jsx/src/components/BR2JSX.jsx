@@ -6,11 +6,11 @@ const BR2JSX = ({ text }) => {
   textArray.forEach((word, id, array) => {
     arrayToRender.push(word);
     if (id < array.length - 1) {
-      arrayToRender.push(<br />);
+      arrayToRender.push(<br key={id} />);
     }
     return arrayToRender;
   });
-  return <div class="Br2jsx">{arrayToRender}</div>;
+  return <div className="Br2jsx">{arrayToRender}</div>;
 };
 
 export default BR2JSX;

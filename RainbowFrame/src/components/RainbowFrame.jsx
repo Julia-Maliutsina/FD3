@@ -1,17 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import '../Rainbow.css';
 
-const RainbowFrame = ({ colors, frameId }) => {
-  return (
-    <div style={{ textAlign: 'center', border: `3px solid ${colors[frameId]}` }} key={frameId}>
-      {frameId < colors.length - 1 ? (
-        <RainbowFrame colors={colors} frameId={(frameId += 1)} />
-      ) : (
-        <span>Hello!</span>
-      )}
-    </div>
-  );
-};
+class RainbowFrame extends React.Component {
+  static propTypes = {
+    colors: PropTypes.arrayOf(PropTypes.string),
+  };
+
+  render() {
+    let result = this.props.children;
+    this.props.colors.forEach(
+      (color) =>
+        (result = (
+          <div style={{ padding: '3px', textAlign: 'center', border: `3px solid ${color}` }}>
+            {result}
+          </div>
+        )),
+    );
+    return result;
+  }
+}
 
 export default RainbowFrame;
