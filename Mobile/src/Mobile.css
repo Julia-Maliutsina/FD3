@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+.Displayed {
+  display: inline-block;
+}
+.NotDisplayed {
+  display: none;
+}
+.MobileComponent {
+  width: 700px;
+  padding: 10px;
+}
+th {
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #dadada;
+}
+td.NameInTable {
+  text-align: center;
+  width: 120px;
+}
+td {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+    sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #dadada;
+  margin: 0;
+}
+.BalanceInTable {
+  width: 80px;
+  padding: 5px;
+}
+.StatusActive {
+  width: 100px;
+  background-color: lightgreen;
+}
+.StatusBlocked {
+  width: 100px;
+  background-color: lightpink;
+}
+.ClientDeleteInTable {
+  width: 70px;
+}
+.ClientEditInTable {
+  width: 70px;
+}
+label {
+  display: block;
+  margin: 5px;
+}
+input {
+  margin: 0px 5px 0px 5px;
+  padding: 3px;
+}
+select {
+  margin: 0px 5px 0px 5px;
+  padding: 3px;
+}
