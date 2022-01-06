@@ -1,0 +1,2255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`компонент MobileCompany снэпшот добавления 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MobileComponent"
+      >
+        <input
+          data-testid="all"
+          type="button"
+          value="Все"
+        />
+        <input
+          data-testid="active"
+          type="button"
+          value="Активные"
+        />
+        <input
+          data-testid="blocked"
+          type="button"
+          value="Заблокированные"
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Фамилия
+              </th>
+              <th>
+                Имя
+              </th>
+              <th>
+                Отчество
+              </th>
+              <th>
+                Баланс
+              </th>
+              <th>
+                Статус
+              </th>
+              <th>
+                Редактировать
+              </th>
+              <th>
+                Удалить
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="Clients"
+          >
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Иванов
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Иван
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Иванович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                200
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Сидоров
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Сидор
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Сидорович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                250
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Петров
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Пётр
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Петрович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                180
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Григорьев
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Григорий
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Григорьевич
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                -220
+              </td>
+              <td
+                class="StatusBlocked"
+              >
+                blocked
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button>
+          Добавить клиента
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MobileComponent"
+    >
+      <input
+        data-testid="all"
+        type="button"
+        value="Все"
+      />
+      <input
+        data-testid="active"
+        type="button"
+        value="Активные"
+      />
+      <input
+        data-testid="blocked"
+        type="button"
+        value="Заблокированные"
+      />
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Фамилия
+            </th>
+            <th>
+              Имя
+            </th>
+            <th>
+              Отчество
+            </th>
+            <th>
+              Баланс
+            </th>
+            <th>
+              Статус
+            </th>
+            <th>
+              Редактировать
+            </th>
+            <th>
+              Удалить
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="Clients"
+        >
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Иванов
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Иван
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Иванович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              200
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Сидоров
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Сидор
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Сидорович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              250
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Петров
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Пётр
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Петрович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              180
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Григорьев
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Григорий
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Григорьевич
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              -220
+            </td>
+            <td
+              class="StatusBlocked"
+            >
+              blocked
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button>
+        Добавить клиента
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`компонент MobileCompany снэпшот добавления 2`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MobileComponent"
+      >
+        <input
+          data-testid="all"
+          type="button"
+          value="Все"
+        />
+        <input
+          data-testid="active"
+          type="button"
+          value="Активные"
+        />
+        <input
+          data-testid="blocked"
+          type="button"
+          value="Заблокированные"
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Фамилия
+              </th>
+              <th>
+                Имя
+              </th>
+              <th>
+                Отчество
+              </th>
+              <th>
+                Баланс
+              </th>
+              <th>
+                Статус
+              </th>
+              <th>
+                Редактировать
+              </th>
+              <th>
+                Удалить
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="Clients"
+          >
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Иванов
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Иван
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Иванович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                200
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Сидоров
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Сидор
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Сидорович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                250
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Петров
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Пётр
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Петрович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                180
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Григорьев
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Григорий
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Григорьевич
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                -220
+              </td>
+              <td
+                class="StatusBlocked"
+              >
+                blocked
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button>
+          Добавить клиента
+        </button>
+        <div>
+          <form>
+            <label>
+              <span>
+                Фамилия
+              </span>
+              <input />
+            </label>
+            <label>
+              <span>
+                Имя
+              </span>
+              <input />
+            </label>
+            <label>
+              <span>
+                Отчество
+              </span>
+              <input />
+            </label>
+            <label>
+              <span>
+                Баланс
+              </span>
+              <input />
+            </label>
+            <label>
+              <span>
+                Статус
+              </span>
+              <select>
+                <option>
+                  active
+                </option>
+                <option>
+                  blocked
+                </option>
+              </select>
+            </label>
+            <input
+              type="button"
+              value="Сохранить"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MobileComponent"
+    >
+      <input
+        data-testid="all"
+        type="button"
+        value="Все"
+      />
+      <input
+        data-testid="active"
+        type="button"
+        value="Активные"
+      />
+      <input
+        data-testid="blocked"
+        type="button"
+        value="Заблокированные"
+      />
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Фамилия
+            </th>
+            <th>
+              Имя
+            </th>
+            <th>
+              Отчество
+            </th>
+            <th>
+              Баланс
+            </th>
+            <th>
+              Статус
+            </th>
+            <th>
+              Редактировать
+            </th>
+            <th>
+              Удалить
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="Clients"
+        >
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Иванов
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Иван
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Иванович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              200
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Сидоров
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Сидор
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Сидорович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              250
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Петров
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Пётр
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Петрович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              180
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Григорьев
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Григорий
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Григорьевич
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              -220
+            </td>
+            <td
+              class="StatusBlocked"
+            >
+              blocked
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button>
+        Добавить клиента
+      </button>
+      <div>
+        <form>
+          <label>
+            <span>
+              Фамилия
+            </span>
+            <input />
+          </label>
+          <label>
+            <span>
+              Имя
+            </span>
+            <input />
+          </label>
+          <label>
+            <span>
+              Отчество
+            </span>
+            <input />
+          </label>
+          <label>
+            <span>
+              Баланс
+            </span>
+            <input />
+          </label>
+          <label>
+            <span>
+              Статус
+            </span>
+            <select>
+              <option>
+                active
+              </option>
+              <option>
+                blocked
+              </option>
+            </select>
+          </label>
+          <input
+            type="button"
+            value="Сохранить"
+          />
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`компонент MobileCompany снэпшот редактирования 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MobileComponent"
+      >
+        <input
+          data-testid="all"
+          type="button"
+          value="Все"
+        />
+        <input
+          data-testid="active"
+          type="button"
+          value="Активные"
+        />
+        <input
+          data-testid="blocked"
+          type="button"
+          value="Заблокированные"
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Фамилия
+              </th>
+              <th>
+                Имя
+              </th>
+              <th>
+                Отчество
+              </th>
+              <th>
+                Баланс
+              </th>
+              <th>
+                Статус
+              </th>
+              <th>
+                Редактировать
+              </th>
+              <th>
+                Удалить
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="Clients"
+          >
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Иванов
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Иван
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Иванович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                200
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Сидоров
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Сидор
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Сидорович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                250
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Петров
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Пётр
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Петрович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                180
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Григорьев
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Григорий
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Григорьевич
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                -220
+              </td>
+              <td
+                class="StatusBlocked"
+              >
+                blocked
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button>
+          Добавить клиента
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MobileComponent"
+    >
+      <input
+        data-testid="all"
+        type="button"
+        value="Все"
+      />
+      <input
+        data-testid="active"
+        type="button"
+        value="Активные"
+      />
+      <input
+        data-testid="blocked"
+        type="button"
+        value="Заблокированные"
+      />
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Фамилия
+            </th>
+            <th>
+              Имя
+            </th>
+            <th>
+              Отчество
+            </th>
+            <th>
+              Баланс
+            </th>
+            <th>
+              Статус
+            </th>
+            <th>
+              Редактировать
+            </th>
+            <th>
+              Удалить
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="Clients"
+        >
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Иванов
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Иван
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Иванович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              200
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Сидоров
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Сидор
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Сидорович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              250
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Петров
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Пётр
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Петрович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              180
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Григорьев
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Григорий
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Григорьевич
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              -220
+            </td>
+            <td
+              class="StatusBlocked"
+            >
+              blocked
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button>
+        Добавить клиента
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`компонент MobileCompany снэпшот редактирования 2`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MobileComponent"
+      >
+        <input
+          data-testid="all"
+          type="button"
+          value="Все"
+        />
+        <input
+          data-testid="active"
+          type="button"
+          value="Активные"
+        />
+        <input
+          data-testid="blocked"
+          type="button"
+          value="Заблокированные"
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Фамилия
+              </th>
+              <th>
+                Имя
+              </th>
+              <th>
+                Отчество
+              </th>
+              <th>
+                Баланс
+              </th>
+              <th>
+                Статус
+              </th>
+              <th>
+                Редактировать
+              </th>
+              <th>
+                Удалить
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="Clients"
+          >
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Иванов
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Иван
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Иванович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                200
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Сидоров
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Сидор
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Сидорович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                250
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Петров
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Пётр
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Петрович
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                180
+              </td>
+              <td
+                class="StatusActive"
+              >
+                active
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+            <tr
+              class="ClientInTable"
+            >
+              <td
+                class="NameInTable"
+              >
+                Григорьев
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Григорий
+              </td>
+              <td
+                class="NameInTable"
+              >
+                Григорьевич
+              </td>
+              <td
+                class="BalanceInTable"
+              >
+                -220
+              </td>
+              <td
+                class="StatusBlocked"
+              >
+                blocked
+              </td>
+              <td
+                class="ClientEditInTable"
+              >
+                <input
+                  type="button"
+                  value="Редактировать"
+                />
+              </td>
+              <td
+                class="ClientDeleteInTable"
+              >
+                <input
+                  type="button"
+                  value="Удалить"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button>
+          Добавить клиента
+        </button>
+        <div>
+          <form>
+            <label>
+              <span>
+                Фамилия
+              </span>
+              <input
+                value="Иванов"
+              />
+            </label>
+            <label>
+              <span>
+                Баланс
+              </span>
+              <input
+                value="200"
+              />
+            </label>
+            <input
+              type="button"
+              value="Сохранить"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MobileComponent"
+    >
+      <input
+        data-testid="all"
+        type="button"
+        value="Все"
+      />
+      <input
+        data-testid="active"
+        type="button"
+        value="Активные"
+      />
+      <input
+        data-testid="blocked"
+        type="button"
+        value="Заблокированные"
+      />
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Фамилия
+            </th>
+            <th>
+              Имя
+            </th>
+            <th>
+              Отчество
+            </th>
+            <th>
+              Баланс
+            </th>
+            <th>
+              Статус
+            </th>
+            <th>
+              Редактировать
+            </th>
+            <th>
+              Удалить
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="Clients"
+        >
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Иванов
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Иван
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Иванович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              200
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Сидоров
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Сидор
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Сидорович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              250
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Петров
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Пётр
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Петрович
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              180
+            </td>
+            <td
+              class="StatusActive"
+            >
+              active
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+          <tr
+            class="ClientInTable"
+          >
+            <td
+              class="NameInTable"
+            >
+              Григорьев
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Григорий
+            </td>
+            <td
+              class="NameInTable"
+            >
+              Григорьевич
+            </td>
+            <td
+              class="BalanceInTable"
+            >
+              -220
+            </td>
+            <td
+              class="StatusBlocked"
+            >
+              blocked
+            </td>
+            <td
+              class="ClientEditInTable"
+            >
+              <input
+                type="button"
+                value="Редактировать"
+              />
+            </td>
+            <td
+              class="ClientDeleteInTable"
+            >
+              <input
+                type="button"
+                value="Удалить"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button>
+        Добавить клиента
+      </button>
+      <div>
+        <form>
+          <label>
+            <span>
+              Фамилия
+            </span>
+            <input
+              value="Иванов"
+            />
+          </label>
+          <label>
+            <span>
+              Баланс
+            </span>
+            <input
+              value="200"
+            />
+          </label>
+          <input
+            type="button"
+            value="Сохранить"
+          />
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

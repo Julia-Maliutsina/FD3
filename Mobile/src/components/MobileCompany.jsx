@@ -7,7 +7,7 @@ import { mobileEvents } from './events';
 
 class MobileCompany extends React.PureComponent {
   static propTypes = {
-    clientss: PropTypes.arrayOf(PropTypes.object),
+    clients: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   state = {
@@ -108,10 +108,21 @@ class MobileCompany extends React.PureComponent {
     ));
     return (
       <div className="MobileComponent">
-        <input type="button" value="Все" onClick={() => this.setState({ filter: 'all' })} />
-        <input type="button" value="Активные" onClick={() => this.setState({ filter: 'active' })} />
         <input
           type="button"
+          data-testid="all"
+          value="Все"
+          onClick={() => this.setState({ filter: 'all' })}
+        />
+        <input
+          type="button"
+          data-testid="active"
+          value="Активные"
+          onClick={() => this.setState({ filter: 'active' })}
+        />
+        <input
+          type="button"
+          data-testid="blocked"
           value="Заблокированные"
           onClick={() => this.setState({ filter: 'blocked' })}
         />
