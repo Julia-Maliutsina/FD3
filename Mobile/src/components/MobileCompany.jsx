@@ -57,7 +57,7 @@ class MobileCompany extends React.PureComponent {
       this.setState({
         clients: changedClients,
         editFormOpen: false,
-        clientToEdit: NaN,
+        clientToEdit: {},
         formMode: '',
       });
   };

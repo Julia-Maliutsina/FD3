@@ -5,7 +5,7 @@ import { mobileEvents } from './events';
 
 class ClientForm extends React.PureComponent {
   static propTypes = {
-    client: PropTypes.object.isRequired,
+    client: PropTypes.object,
     mode: PropTypes.string.isRequired,
   };
 
